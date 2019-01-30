@@ -1,0 +1,12 @@
+[package]
+name = "fastgif"
+version = "0.1.0"
+authors = ["CoolOppo <CoolOppo@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+gif = "0.10.1"
+
+[profile.release]
+lto='thin'
+panic='abort'
