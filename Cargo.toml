@@ -3,6 +3,15 @@ name = "fastgif"
 version = "0.1.0"
 authors = ["CoolOppo <CoolOppo@users.noreply.github.com>"]
 edition = "2018"
+homepage = "https://cocks.website"
+repository = "https://github.com/CoolOppo/fastgif"
+
+readme = "README.md"
+keywords = ["gif"]
+categories = ["graphics", "multimedia::encoding", "multimedia::images"]
+license = "MIT"
+[badges]
+maintenance = { status = "as-is" }
 
 [dependencies]
 gif = "0.10.1"
