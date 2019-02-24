@@ -6,7 +6,6 @@ use std::io::{BufReader, BufWriter};
 use std::path::Path;
 
 fn main() -> Result<(), Box<dyn Error>> {
-    // Open the file
     let args: Vec<String> = env::args().collect();
 
     let file_path = Path::new(&args[1]);
@@ -15,9 +14,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut output_image = BufWriter::new(File::create(Path::new(&out_file_name)).unwrap());
 
     let decoder = gif::Decoder::new(BufReader::new(File::open(file_path).unwrap()));
-    // Configure the decoder such that it will expand the image to RGBA.
-    //sadlkfjalskfjlaksdjflkdsa decoder.set(gif::ColorOutput::RGBA);
-    // Read the file header
+    
     let mut decoder = decoder.read_info().unwrap();
     let mut encoder = Encoder::new(
         &mut output_image,
